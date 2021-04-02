@@ -38,9 +38,10 @@ const scrape = async (browser, params) => {
   await page.click("a[ui-sref='movimientosCC.movimientos'");
   await page.waitForSelector("bch-button[text='Filtrar']");
   await page.screenshot({ path: 'screenshot2.jpg' });
-
   // Access filter options
   await page.click("bch-button[text='Filtrar']");
+
+  console.log('User Authenticated');
 
   // Set response interception
   page.on('response', async (response) => {
@@ -48,6 +49,7 @@ const scrape = async (browser, params) => {
     if (request.url() === 'https://portalpersonas.bancochile.cl/mibancochile/rest/persona/movimientos/getcartola') {
       const resObject = await response.json();
       transactionCount += resObject.cantidadMovimientos;
+      console.log(resObject.cantidadMovimientos);
     }
   });
 
