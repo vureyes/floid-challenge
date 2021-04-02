@@ -1,0 +1,33 @@
+{
+  "name": "floid-challenge",
+  "version": "1.0.0",
+  "description": "A scrapper for bank related information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vureyes/floid-challenge.git"
+  },
+  "author": "vureyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vureyes/floid-challenge/issues"
+  },
+  "homepage": "https://github.com/vureyes/floid-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "puppeteer": "^8.0.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
